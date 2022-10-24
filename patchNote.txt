@@ -3,3 +3,9 @@ By Joker
 Add player control
 Add third person camera
 Basic setup of ground and wall
+
+10/24 8:25am
+By Joker
+1. add first person camera 
+2. add teleporters
+3. add one room objects for testing
