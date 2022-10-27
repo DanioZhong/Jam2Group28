@@ -24,6 +24,7 @@ public class Interactor : MonoBehaviour
     {
         //Debug.Log(interactable);
         numFound = Physics.OverlapSphereNonAlloc(interactionPoint.position, interactionPointRadius, colliders, interactableMask);
+
         if(numFound > 0)
         {
             interactable = colliders[0].GetComponent<IInteractable>();
@@ -33,6 +34,8 @@ public class Interactor : MonoBehaviour
             }*/
             if (interactable != null)
             {
+               
+
                 if (!_interactionPromptUI.IsDisplayed) _interactionPromptUI.SetUp(interactable.InteractionPrompt);
 
                 if (Input.GetKeyDown(KeyCode.E)) interactable.Interact(interactor: this);

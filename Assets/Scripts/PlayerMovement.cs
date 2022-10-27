@@ -12,7 +12,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject gobal;
     private Initialization gobal_init;
     private Setting gobal_setting;
-    int tempCount = 0;
+    
+    //int tempCount = 0;
     //speed of movement
     public float speed;
     //current controller
@@ -23,6 +24,10 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public LayerMask groundMask;
     public float jumpHeight = 3f;
+
+    //variable about trigger
+    private GameObject spawner;
+    private Spawner spawner_script;
 
 
 
@@ -54,6 +59,11 @@ public class PlayerMovement : MonoBehaviour
 
 
 
+     
+
+
+
+
     private void Start()
     {
         firstPersonEnabled = true;
@@ -63,6 +73,8 @@ public class PlayerMovement : MonoBehaviour
         gobal_setting = gobal.GetComponent<Setting>();
         thirdPerson_Camera = GameObject.Find("Camera ThirdPerson");
         cam = thirdPerson_Camera.transform;
+        spawner = GameObject.Find("Spawner");
+        spawner_script = spawner.GetComponent<Spawner>();
     }
 
     void Update()
@@ -137,32 +149,40 @@ public class PlayerMovement : MonoBehaviour
         Collider[] hitColliders = Physics.OverlapSphere(groundCheck.position, collidingDistance);
         foreach (var hitCollider in hitColliders)
         {
-            if (hitCollider.tag == "teleporter")
+            if (hitCollider.tag == "triggers")
             {
-                //random teleport to any doors except the current one
-                //validation check if it's going to teleport to the same door
-                do
-                {
-                    tempCount = Random.Range(0, gobal_init.teleportersList.Count());
+               
+               
+                spawner_script.enableGenerate = true;
 
-                } while (hitCollider.name == gobal_init.teleportersList[tempCount].name);
-                //get direction location and start teleport
-                teleportPos = gobal_init.teleportersList[tempCount].transform.position;
-                teleportPos.y = 0.1f;
+               // Debug.Log("Hye" + spawner_script.enableGenerate);
+                //some old code about teleporting
+                ////random teleport to any doors except the current one
+                ////validation check if it's going to teleport to the same door
+                //do
+                //{
+                //    tempCount = Random.Range(0, gobal_init.teleportersList.Count());
 
-                if (gobal_init.teleportersList[tempCount].name == "Door01")
-                {
-                    teleportPos.z += 2f;
-                }
-                else if (gobal_init.teleportersList[tempCount].name == "Door02")
-                {
-                    teleportPos.x -= 2f;
-                }
+                //} while (hitCollider.name == gobal_init.teleportersList[tempCount].name);
+                ////get direction location and start teleport
+                //teleportPos = gobal_init.teleportersList[tempCount].transform.position;
+                //teleportPos.y = 0.1f;
+
+                //if (gobal_init.teleportersList[tempCount].name == "Door01")
+                //{
+                //    teleportPos.z += 2f;
+                //}
+                //else if (gobal_init.teleportersList[tempCount].name == "Door02")
+                //{
+                //    teleportPos.x -= 2f;
+                //}
+                //StartCoroutine("Teleport");
 
 
-                StartCoroutine("Teleport");
-
-
+            }
+            else
+            {
+               spawner_script.enableGenerate = false;
             }
         }
     }
@@ -170,11 +190,12 @@ public class PlayerMovement : MonoBehaviour
 
     void jumpFeature()
     {
-
+       
         //jump features
         //applies to both first person and third person camera
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
+            
             //v = sqrt (h * -2 * g)
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
@@ -216,19 +237,20 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-    IEnumerator Teleport()
-    {
-        //avoid overlapping pos control
-        enableControl = false;
-        yield return new WaitForSeconds(0.1f);
-        //teleport to location
-        gameObject.transform.position = teleportPos;
-        //regenerate the room objects
-        gobal_setting.regeneratePos = true;
-        yield return new WaitForSeconds(0.1f);
-        enableControl = true;
+    //old code about teleporting
+    //IEnumerator Teleport()
+    //{
+    //    //avoid overlapping pos control
+    //    enableControl = false;
+    //    yield return new WaitForSeconds(0.1f);
+    //    //teleport to location
+    //    gameObject.transform.position = teleportPos;
+    //    //regenerate the room objects
+    //    gobal_setting.regeneratePos = true;
+    //    yield return new WaitForSeconds(0.1f);
+    //    enableControl = true;
 
-    }
+    //}
 }
 
 

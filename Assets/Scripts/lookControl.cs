@@ -8,8 +8,8 @@ public class lookControl : MonoBehaviour
     public Transform playerBody;
     public bool enableCursor;
 
-    float mouseX;
-    float mouseY;
+    float mouseX ;
+    float mouseY ;
 
     float xRotation = 0f;
 
@@ -32,8 +32,12 @@ public class lookControl : MonoBehaviour
             Cursor.visible = true;
         }
 
+
+
         mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+
+
 
         //mouse X will rotate player
         playerBody.Rotate(Vector3.up * mouseX);
