@@ -2,23 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Furniture : MonoBehaviour, IInteractable
+public class Furniture : MonoBehaviour
 {
-    [SerializeField] private string name;
-    public string InteractionName => name;
-
-    [SerializeField] private string prompt;
-    public string InteractionPrompt => prompt;
-
-    [SerializeField] private string text;
-    public string paragraphText => text;
-
-    public bool Interact(Interactor interactor)
-    {
-        Debug.Log(message: "Opening chest!");
-        return true;
-    }
-
+    public int type = 0;
     // Start is called before the first frame update
     void Start()
     {

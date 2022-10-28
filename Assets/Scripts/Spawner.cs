@@ -38,17 +38,21 @@ public class Spawner : MonoBehaviour
     //public Vector3 init_Pos;
     public float roomWidth;
 
-    //info about trigger  
-
+    //info about trigger
     //public GameObject first_Trigger;
     //info about key
     //public GameObject first_Key;
 
+    //local private variables
+    Vector3 spawnPos;
+
+
     //room trigger keyObj Chest
     public List<GameObject> initialObjects;
 
-    //local private variables
-    Vector3 spawnPos;
+
+
+
     int currRoom = 0; // Dinig room = 1, Bed room = 2
 
     //local private store init pos
@@ -95,10 +99,9 @@ public class Spawner : MonoBehaviour
             //generate another stuffs here;
             generateFurniture();
 
+
+
             destroySpawnedObj();
-
-
-
             global_setting.enableDoor = false;
         }
 
@@ -184,14 +187,13 @@ public class Spawner : MonoBehaviour
 
     void generateTrigger()
     {
+   
         //make a trigger
         spawnPos = currentPos_Trigger;
-
         spawnPos.x += roomWidth;
         GameObject newTrigger = Instantiate(defaultTrigger, spawnPos, Quaternion.Euler(0, 0, 0));
         triggers.Add(newTrigger);
         currentPos_Trigger = spawnPos;
-
     }
 
     void generateFurniture(){
@@ -203,9 +205,9 @@ public class Spawner : MonoBehaviour
         GameObject furnset = transform.GetChild(currRoom).gameObject;
         furnset.SetActive(true);
         
-        Vector3 pos;
+        //Vector3 pos;
         foreach (Transform child in furnset.transform){
-            spawnPos = child.position;
+            spawnPos = currentPos_Room;
             spawnPos.x -= roomWidth/2;
             
             child.transform.position = spawnPos;
@@ -218,7 +220,7 @@ public class Spawner : MonoBehaviour
     void destroySpawnedObj()
     {
         //destroy all initial objects
-        if(initialObjects.Count != 0)
+        if (initialObjects.Count != 0)
         {
             int tempI = initialObjects.Count;
             for (int i = 0; i < tempI; i++)
@@ -228,6 +230,8 @@ public class Spawner : MonoBehaviour
             }
 
         }
+
+
         //destroy
         if (rooms.Count > 1)
         {
