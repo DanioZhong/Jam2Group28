@@ -35,13 +35,17 @@ public class Spawner : MonoBehaviour
 
 
     //info about where to put the spawn room
-    public Vector3 init_Pos;
+    //public Vector3 init_Pos;
     public float roomWidth;
 
-    //info about trigger
-    public GameObject first_Trigger;
+    //info about trigger  
+
+    //public GameObject first_Trigger;
     //info about key
-    public GameObject first_Key;
+    //public GameObject first_Key;
+
+    //room trigger keyObj Chest
+    public List<GameObject> initialObjects;
 
     //local private variables
     Vector3 spawnPos;
@@ -56,10 +60,10 @@ public class Spawner : MonoBehaviour
     {
         //init
         enableGenerate = false;
-        init_Pos = new Vector3(2.38f, -0.9110641f, -2.690001f);
-        currentPos_Room = init_Pos;
-        currentPos_Key = first_Key.transform.position;
-        currentPos_Trigger = first_Trigger.transform.position;
+        initialObjects[0].transform.position = new Vector3(2.38f, -0.9110641f, -2.690001f);
+        currentPos_Room = initialObjects[0].transform.position;
+        currentPos_Key = initialObjects[2].transform.position;
+        currentPos_Trigger = initialObjects[1].transform.position;
 
         //assign global setting
         global_setting = GameObject.Find("Global").GetComponent<Setting>();
@@ -180,6 +184,7 @@ public class Spawner : MonoBehaviour
     {
         //make a trigger
         spawnPos = currentPos_Trigger;
+
         spawnPos.x += roomWidth;
         GameObject newTrigger = Instantiate(defaultTrigger, spawnPos, Quaternion.Euler(0, 0, 0));
         triggers.Add(newTrigger);
@@ -189,6 +194,17 @@ public class Spawner : MonoBehaviour
 
     void destroySpawnedObj()
     {
+        //destroy all initial objects
+        if(initialObjects.Count != 0)
+        {
+            int tempI = initialObjects.Count;
+            for (int i = 0; i < tempI; i++)
+            {
+                GameObject.Destroy(initialObjects[0]);
+                initialObjects.RemoveAt(0);
+            }
+
+        }
         //destroy
         if (rooms.Count > 1)
         {
