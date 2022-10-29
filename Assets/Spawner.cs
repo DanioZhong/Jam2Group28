@@ -200,7 +200,7 @@ public class Spawner : MonoBehaviour
         
         Vector3 pos;
         foreach (Transform child in furnset.transform){
-            spawnPos = currentPos_Room;
+            spawnPos = child.position;
             spawnPos.x -= roomWidth/2;
             
             child.transform.position = spawnPos;
