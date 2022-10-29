@@ -77,7 +77,7 @@ public class Spawner : MonoBehaviour
         init_roomPrefab();
         init_keyPrefab();
         init_triggerPrefab();
-        generateFurniture();
+        //generateFurniture();
 
     }
 
@@ -97,7 +97,7 @@ public class Spawner : MonoBehaviour
             generateKey();
 
             //generate another stuffs here;
-            generateFurniture();
+           // generateFurniture();
 
 
 

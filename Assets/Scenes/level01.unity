@@ -485,7 +485,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enableGenerate: 0
   roomWidth: 14.9
-  initialObjects: []
+  initialObjects:
+  - {fileID: 387273392}
+  - {fileID: 1478586305}
+  - {fileID: 969451579}
+--- !u!1 &387273392 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 622044996408136238, guid: 978b892d438c7804187b91594e1794eb, type: 3}
+  m_PrefabInstance: {fileID: 4042246348882707848}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &394859289 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7726532506567794378, guid: 2396598da5446e4429537f4388d6a3d9, type: 3}
@@ -1432,6 +1440,11 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &969451579 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 332476972815319628, guid: ddfbcb7a9807d6443a98c10f20224919, type: 3}
+  m_PrefabInstance: {fileID: 332476973211656144}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1020598929 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7726532506567794378, guid: 2396598da5446e4429537f4388d6a3d9, type: 3}
@@ -2165,6 +2178,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1433042691}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1478586305 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4206028125981673983, guid: 959e4155fbff07b4d8267ff8f2ab7a66, type: 3}
+  m_PrefabInstance: {fileID: 4206028125228297901}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1792137213
 GameObject:
   m_ObjectHideFlags: 3
