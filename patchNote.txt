@@ -1,7 +1,9 @@
+
 10/28
 1. add random object spwan
 2. remove init room
 3. add room decoration  by Arrian 
+4. github fix
 
 10/27
 By Joker
