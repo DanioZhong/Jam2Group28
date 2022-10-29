@@ -8,6 +8,8 @@ public class Door : MonoBehaviour, IInteractable
     [SerializeField] private string prompt;
     private Setting globalSetting_script;
     public string InteractionPrompt => prompt;
+    [SerializeField] private string text;
+    public string paragraphText => text;
 
     private void Start()
     {

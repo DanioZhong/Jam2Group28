@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Notepad : MonoBehaviour
+public class Notepad : MonoBehaviour, IInteractable
 {
     [SerializeField] private string prompt;
     public string InteractionPrompt => prompt;
