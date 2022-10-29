@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Piano : MonoBehaviour
+public class Piano : MonoBehaviour, IInteractable
 {
 
     [SerializeField] private string prompt;
