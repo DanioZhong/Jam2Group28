@@ -75,19 +75,16 @@ public class PlayerMovement : MonoBehaviour
         cam = thirdPerson_Camera.transform;
         spawner = GameObject.Find("Spawner");
         spawner_script = spawner.GetComponent<Spawner>();
+        
     }
 
-    void Update()
+    private void FixedUpdate()
     {
-
-
         if (enableControl)
         {
 
             //=================================================================
             /*                      player movement setup                    */
-
-
             playerMovementSetup();
             /*                             end                               */
             //=================================================================
@@ -139,23 +136,26 @@ public class PlayerMovement : MonoBehaviour
         //create an invisiable sphere use to check if it's colliding with certain layer
         isGrounded = Physics.CheckSphere(groundCheck.position, collidingDistance, groundMask);
 
+
         //reset y velocity when it's on ground
         if (isGrounded && velocity.y < 0)
         {
-            velocity.y = -2f;
+            velocity.y = -4f;
+            
         }
 
 
         Collider[] hitColliders = Physics.OverlapSphere(groundCheck.position, collidingDistance);
         foreach (var hitCollider in hitColliders)
         {
+
             if (hitCollider.tag == "triggers")
             {
-               
-               
+           
                 spawner_script.enableGenerate = true;
+              
 
-               // Debug.Log("Hye" + spawner_script.enableGenerate);
+                // Debug.Log("Hye" + spawner_script.enableGenerate);
                 //some old code about teleporting
                 ////random teleport to any doors except the current one
                 ////validation check if it's going to teleport to the same door
@@ -182,7 +182,7 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
-               spawner_script.enableGenerate = false;
+                //spawner_script.enableGenerate = false;
             }
         }
     }
@@ -190,14 +190,16 @@ public class PlayerMovement : MonoBehaviour
 
     void jumpFeature()
     {
-       
         //jump features
         //applies to both first person and third person camera
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded )
         {
             
             //v = sqrt (h * -2 * g)
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+          
+
+
         }
         //apply gravity
         velocity.y += gravity * Time.deltaTime;
