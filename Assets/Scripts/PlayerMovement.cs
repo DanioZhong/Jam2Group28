@@ -78,8 +78,11 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
+
     private void FixedUpdate()
     {
+
+        //physic related
         if (enableControl)
         {
 
@@ -89,15 +92,20 @@ public class PlayerMovement : MonoBehaviour
             /*                             end                               */
             //=================================================================
 
+        }
+    }
 
+    
 
-
+    private void Update()
+    {
+        if (enableControl)
+        {
             //=================================================================
             /*                           Jumping                             */
             jumpFeature();
             /*                             end                               */
             //=================================================================
-
 
 
             //player control in first person camera
