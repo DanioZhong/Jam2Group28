@@ -118,19 +118,7 @@ public class Spawner : MonoBehaviour
             generateFurniture();
 
 
-            GameObject.Destroy(rooms[0]);
-            GameObject.Destroy(furnitureSets[0]);
-            GameObject.Destroy(triggers[0]);
-            rooms.RemoveAt(0);
-            furnitureSets.RemoveAt(0);
-            triggers.RemoveAt(0);
- 
-
-            if (stairs.Count > 2)
-            {
-                GameObject.Destroy(stairs[0]);
-                stairs.RemoveAt(0);
-            }
+            destroySpawnedObj();
 
             // generateKey();
 
@@ -138,9 +126,6 @@ public class Spawner : MonoBehaviour
             //// generateFurniture();
             //spawnPos = currentPos_Room;
             //GameObject newRoom = Instantiate(defaultRoom, spawnPos, Quaternion.Euler(0, 0, 0));
-
-
-
             //destroySpawnedObj();
 
             // global_setting.enableRoomChange = false;
@@ -275,40 +260,17 @@ public class Spawner : MonoBehaviour
 
     void destroySpawnedObj()
     {
-        //destroy all initial objects
-        if (initialObjects.Count != 0)
+        //destroy all objects
+        GameObject.Destroy(rooms[0]);
+        GameObject.Destroy(furnitureSets[0]);
+        GameObject.Destroy(triggers[0]);
+        rooms.RemoveAt(0);
+        furnitureSets.RemoveAt(0);
+        triggers.RemoveAt(0);
+        if (stairs.Count > 2)
         {
-            int tempI = initialObjects.Count;
-            for (int i = 0; i < tempI; i++)
-            {
-                //destroy the rest
-                GameObject.Destroy(initialObjects[0]);
-                initialObjects.RemoveAt(0);
-            }
-
-            //destroy trigger
-            triggers[0].SetActive(false);
-            GameObject.Destroy(triggers[0]);
-            triggers.RemoveAt(0);
-
-        }
-
-
-        //destroy
-        if (rooms.Count > 1)
-        {
-           
-            GameObject.Destroy(rooms[0]);
-            GameObject.Destroy(triggers[0]);
-
             GameObject.Destroy(stairs[0]);
-            rooms.RemoveAt(0);
-            triggers.RemoveAt(0);
-
             stairs.RemoveAt(0);
-
-            //GameObject.Destroy(keys[0]);
-            //keys.RemoveAt(0);
         }
 
     }
