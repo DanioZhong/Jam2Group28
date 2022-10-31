@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 1433626522209949541}
   m_Layer: 7
   m_Name: Box With Notes
-  m_TagString: Untagged
+  m_TagString: keys
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -383,7 +383,7 @@ GameObject:
   - component: {fileID: 1433626520805781680}
   m_Layer: 7
   m_Name: Trophy
-  m_TagString: Untagged
+  m_TagString: keys
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1622,7 +1622,7 @@ GameObject:
   - component: {fileID: 7279574848687246121}
   m_Layer: 7
   m_Name: Kid Building Blox
-  m_TagString: Untagged
+  m_TagString: keys
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1734,7 +1734,7 @@ GameObject:
   - component: {fileID: 7279574849549421950}
   m_Layer: 7
   m_Name: Notepad
-  m_TagString: Untagged
+  m_TagString: keys
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

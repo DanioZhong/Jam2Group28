@@ -66,7 +66,8 @@ public class Spawner : MonoBehaviour
     int currRoom = 0; // Dinig room = 1, Bed room = 2
 
     //local private store init pos
-    public Vector3 currentPos_Room;
+    
+    [HideInInspector] public Vector3 currentPos_Room;
     Vector3 currentPos_Trigger;
     Vector3 currentPos_Stairs;
     Vector3 currentPos_FurnitureSets;
