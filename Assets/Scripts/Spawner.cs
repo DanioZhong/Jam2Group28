@@ -63,7 +63,7 @@ public class Spawner : MonoBehaviour
 
 
 
-    //int currRoom = 0; // Dinig room = 1, Bed room = 2
+    int currRoom = 0; // Dinig room = 1, Bed room = 2
 
     //local private store init pos
     public Vector3 currentPos_Room;
@@ -182,7 +182,7 @@ public class Spawner : MonoBehaviour
             if (prefabs_keys[i].name == "Furniture Sets")
             {
                 defaultFurnitureSets = prefabs_keys[i];
-
+                
             }
         }
     }
@@ -220,6 +220,15 @@ public class Spawner : MonoBehaviour
         GameObject newSet = Instantiate(defaultFurnitureSets, spawnPos, Quaternion.Euler(0, 0, 0));
         furnitureSets.Add(newSet);
         currentPos_FurnitureSets = spawnPos;
+
+        if (global_setting.enableRoomChange){
+            Debug.Log(currRoom);
+            global_setting.enableRoomChange = false;
+            currRoom = (currRoom + 1) % 6;
+            Debug.Log(currRoom);
+        }
+        Debug.Log(newSet.GetComponent<RoomSetLogic>());
+        newSet.GetComponent<RoomSetLogic>().updateSet(currRoom);
     }
 
 

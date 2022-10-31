@@ -11,6 +11,9 @@ public class FogControl : MonoBehaviour
     private GameObject player;
     
     private float roomWidth = 13.0f; // This gets offset due to hardcode. I need a way to get the actual values
+                                     // Confirm with the artists if they want a stair case that is enclosed or open
+                                     // Prolly enclosed to prevent player from falling.
+
     private float stairLength = 34.0f; // I can also make another trigger but that is kinda cringe. 
     
 
@@ -28,8 +31,9 @@ public class FogControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Check if player is in a room or stair and enable/disable fog appropriately
         currPos = (player.transform.position.x+(roomWidth + stairLength)) % (roomWidth + stairLength);
-        // Check if player is in a room or stair
+        
         if (currPos < stairLength && !isFogOn){
             EnableFog();
         }
@@ -38,6 +42,8 @@ public class FogControl : MonoBehaviour
         }
     }
 
+
+    // Fogs have transitions
     void EnableFog(){
         isFogOn = true;
         StartCoroutine(LerpEnableFog());
@@ -61,5 +67,4 @@ public class FogControl : MonoBehaviour
             yield return null;//ew WaitForSeconds(.0001f);
         }
     }
-
 }

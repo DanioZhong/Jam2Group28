@@ -15,9 +15,9 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogColor: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 1}
   m_FogMode: 1
-  m_FogDensity: 0.4
+  m_FogDensity: 0
   m_LinearFogStart: 0
   m_LinearFogEnd: 20
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -381,6 +381,7 @@ GameObject:
   m_Component:
   - component: {fileID: 315462754}
   - component: {fileID: 315462755}
+  - component: {fileID: 315462756}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -422,6 +423,19 @@ MonoBehaviour:
   - {fileID: 2037031594}
   - {fileID: 1478586305}
   - {fileID: 1204877292}
+  currentPos_Room: {x: 0, y: 0, z: 0}
+--- !u!114 &315462756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315462753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b8cb4e07649bbd4bb4701061f97a21c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &394859289 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7726532506567794378, guid: 2396598da5446e4429537f4388d6a3d9, type: 3}
@@ -772,7 +786,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643253170}
-  m_LocalRotation: {x: 0.13528293, y: -0.000000019060465, z: 0.0000000026024805, w: 0.990807}
+  m_LocalRotation: {x: 0.13528293, y: 0.000000019060469, z: -0.000000002602481, w: 0.990807}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1561,12 +1575,7 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!4 &1020598929 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7726532506567794378, guid: 2396598da5446e4429537f4388d6a3d9, type: 3}
-  m_PrefabInstance: {fileID: 676450137}
-  m_PrefabAsset: {fileID: 0}
---- !u!43 &1120503197
+--- !u!43 &1015116221
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1730,6 +1739,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!4 &1020598929 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7726532506567794378, guid: 2396598da5446e4429537f4388d6a3d9, type: 3}
+  m_PrefabInstance: {fileID: 676450137}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1185067489
 GameObject:
   m_ObjectHideFlags: 0
@@ -2294,7 +2308,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-201474
+  m_Name: pb_Mesh-1574
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3259,7 +3273,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1988580294}
-  m_LocalRotation: {x: 0.17118467, y: -0.000000018953356, z: 0.000000003293134, w: 0.98523897}
+  m_LocalRotation: {x: 0.17118467, y: -0.000000018953358, z: 0.0000000032931342, w: 0.98523897}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7619,6 +7633,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1293422679}
+    - target: {fileID: 4450339503804654335, guid: 978b892d438c7804187b91594e1794eb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4450339504191334956, guid: 978b892d438c7804187b91594e1794eb, type: 3}
       propertyPath: m_Name
       value: Room
@@ -7695,15 +7713,15 @@ PrefabInstance:
     - target: {fileID: 5580118328313758057, guid: 925f85627d9a2314bbab43c47e664b58, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1120503197}
+      objectReference: {fileID: 1015116221}
     - target: {fileID: 5580118328313758057, guid: 925f85627d9a2314bbab43c47e664b58, type: 3}
       propertyPath: m_VersionIndex
-      value: 4754
+      value: 4757
       objectReference: {fileID: 0}
     - target: {fileID: 5580118328313758058, guid: 925f85627d9a2314bbab43c47e664b58, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1120503197}
+      objectReference: {fileID: 1015116221}
     - target: {fileID: 5580118328313758060, guid: 925f85627d9a2314bbab43c47e664b58, type: 3}
       propertyPath: m_Name
       value: Stairs
@@ -7711,7 +7729,7 @@ PrefabInstance:
     - target: {fileID: 5580118328313758061, guid: 925f85627d9a2314bbab43c47e664b58, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1120503197}
+      objectReference: {fileID: 1015116221}
     - target: {fileID: 5580118328313758070, guid: 925f85627d9a2314bbab43c47e664b58, type: 3}
       propertyPath: m_RootOrder
       value: 11
