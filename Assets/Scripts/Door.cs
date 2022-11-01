@@ -21,7 +21,7 @@ public class Door : MonoBehaviour, IInteractable
     public bool Interact(Interactor interactor)
     {
 
-        globalSetting_script.enableRoomChange = true;
+      //  globalSetting_script.enableRoomChange = true;
 
         var inventory = interactor.GetComponent<Inventory>();
         if(inventory == null) return false;
