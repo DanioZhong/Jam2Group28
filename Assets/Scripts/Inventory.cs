@@ -17,8 +17,8 @@ public class Inventory : MonoBehaviour
 //        if(Input.GetKeyDown(KeyCode.Q)) HasKey = !HasKey;
         if(Input.GetKeyDown(KeyCode.Q)){ // for testing purposes because i dont know where the key logic is
             HasKey = !HasKey;
-            global_setting.enableRoomChange = HasKey;
-            Debug.Log("Got Key");
+         //   global_setting.enableRoomChange = HasKey;
+            //Debug.Log("Got Key");
             HasKey = !HasKey; // this is just for debugging.
         }
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Setting : MonoBehaviour
 {
-    [HideInInspector] public bool enableRoomChange;
+    //[HideInInspector] public bool enableRoomChange;
     //old used code
     public Vector2 roomX = new Vector2(-26f, -2f);
     public Vector2 roomZ = new Vector2(-6f, 18f);
@@ -12,7 +12,7 @@ public class Setting : MonoBehaviour
 
     private void Start()
     {
-        enableRoomChange = false;
+        //enableRoomChange = false;
     }
 
 
