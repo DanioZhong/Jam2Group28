@@ -26,6 +26,8 @@ public class BoxWithNotes : MonoBehaviour, IInteractable
     public bool Interact(Interactor interactor)
     {
         global_init.keyList.Find(x => x.name == "Box").isInteracted = true;
+
+
         Debug.Log(message: "Opening Box with Notes!");
         return true;
     }

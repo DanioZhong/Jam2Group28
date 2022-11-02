@@ -10,7 +10,10 @@ public class FogControl : MonoBehaviour
     private Spawner spawner;
     private GameObject player;
     
-    private float roomWidth = 10.64f;
+    private float roomWidth = 13.0f; // This gets offset due to hardcode. I need a way to get the actual values
+                                     // Confirm with the artists if they want a stair case that is enclosed or open
+                                     // Prolly enclosed to prevent player from falling.
+
     private float stairLength = 34.0f; // I can also make another trigger but that is kinda cringe. 
     
 
@@ -25,24 +28,17 @@ public class FogControl : MonoBehaviour
         player = GameObject.Find("Player");
     }
 
-    //https://stackoverflow.com/questions/1082917/mod-of-negative-number-is-melting-my-brain
-    float mod(float x, float m) { 
-        return (x%m + m)%m;
-    }
-
     // Update is called once per frame
     void Update()
     {
         // Check if player is in a room or stair and enable/disable fog appropriately
-        currPos = mod(player.transform.position.x+ roomWidth/2, roomWidth + stairLength);
+        currPos = (player.transform.position.x+(roomWidth + stairLength)) % (roomWidth + stairLength);
         
-        if (currPos < roomWidth && isFogOn){
-            Debug.Log("DFog");
-            DisableFog();
-        }
-        if (currPos > roomWidth && !isFogOn){
-            Debug.Log("EFog");
+        if (currPos < stairLength && !isFogOn){
             EnableFog();
+        }
+        if (currPos > stairLength && isFogOn){
+            DisableFog();
         }
     }
 
