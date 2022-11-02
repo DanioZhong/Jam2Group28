@@ -185,7 +185,7 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator waitThreeSecond()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(3);
         hasInteracted = false;
     }
 
