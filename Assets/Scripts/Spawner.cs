@@ -264,14 +264,16 @@ public class Spawner : MonoBehaviour
             GameObject newRoom = Instantiate(defaultRoom, spawnPos, Quaternion.Euler(0, -90, 0));
             rooms.Add(newRoom);
             currentPos_Room = spawnPos;
+            Debug.Log(currentPos_Room);
             //make a stair
             spawnPos = currentPos_Stairs;
             //spawnPos.x += roomPosChange.x;
             //spawnPos.y += roomPosChange.y;
             spawnPos += roomPosChange;
-            GameObject newStairs = Instantiate(defaultStairs, spawnPos, Quaternion.Euler(0, -90, 0));
+            GameObject newStairs = Instantiate(defaultStairs, spawnPos, Quaternion.Euler(0, 0, 0));
             stairs.Add(newStairs);
             currentPos_Stairs = spawnPos;
+            
             //make checker
             spawnPos = currentPos_TriggerSet;
             //spawnPos.x += roomPosChange.x;
@@ -289,7 +291,7 @@ public class Spawner : MonoBehaviour
             //spawnPos.x -= roomPosChange.x;
             //spawnPos.y -= roomPosChange.y;
             spawnPos -= roomPosChange;
-            GameObject newRoom = Instantiate(defaultRoom, spawnPos, Quaternion.Euler(0, 0, 0));
+            GameObject newRoom = Instantiate(defaultRoom, spawnPos, Quaternion.Euler(0, 90, 0));
             rooms.Add(newRoom);
             currentPos_RoomUp = spawnPos;
             //make a stair
@@ -297,7 +299,7 @@ public class Spawner : MonoBehaviour
             //spawnPos.x -= roomPosChange.x;
             //spawnPos.y -= roomPosChange.y;
             spawnPos -= roomPosChange;
-            GameObject newStairs = Instantiate(defaultStairs, spawnPos, Quaternion.Euler(0, -90, 0));
+            GameObject newStairs = Instantiate(defaultStairs, spawnPos, Quaternion.Euler(0, 0, 0));
             stairsUp.Add(newStairs);
             currentPos_StairsUp = spawnPos;
             //make checker
