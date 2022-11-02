@@ -239,7 +239,7 @@ public class Spawner : MonoBehaviour
         for (int i = 0; i < prefabs_keys.Count; i++)
         {
             //put assign default room
-            if (prefabs_keys[i].name == "Furniture Sets")
+            if (prefabs_keys[i].name == "SceneSets")
             {
                 defaultFurnitureSets = prefabs_keys[i];
                 

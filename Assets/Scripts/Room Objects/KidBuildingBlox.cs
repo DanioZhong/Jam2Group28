@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class KidBuildingBlox: MonoBehaviour, IInteractable
 {
-    public string keyName;
     [SerializeField] private string prompt;
     public string InteractionPrompt => prompt;
 
@@ -26,7 +25,7 @@ public class KidBuildingBlox: MonoBehaviour, IInteractable
     public bool Interact(Interactor interactor)
     {
 
-        global_init.keyList.Find(x => x.name == keyName).isInteracted = true;
+        global_init.keyList.Find(x => x.name == "Blox").isInteracted = true;
 
         Debug.Log(message: "Opening Kid Building Blox!");
 
