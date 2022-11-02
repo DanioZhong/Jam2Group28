@@ -15,27 +15,27 @@ public class RoomSetLogic : MonoBehaviour
     [HideInInspector]
     public void NextRoomCheck(){ // Won't be called due to destroying
 
-        Debug.Log("run run run");
-        global = GameObject.Find("Global");
-        global_init = global.GetComponent<Initialization>();
+        //Debug.Log("run run run");
+        //global = GameObject.Find("Global");
+        //global_init = global.GetComponent<Initialization>();
 
-        if (global_init.keyList.Find(x => x.name == "Box").isInteracted)
-        {
-            currRoom = 1;
-        }
-        if(global_init.keyList.Find(x => x.name == "Trophy").isInteracted)
-        {
-            currRoom = 2;
-        }
-        if(global_init.keyList.Find(x => x.name == "Notepad").isInteracted)
-        {
-            currRoom = 3;
-        }
-        if(global_init.keyList.Find(x => x.name == "Blox").isInteracted)
-        {
-            currRoom = 0;
-        }
-        updateSet(currRoom);
+        //if (global_init.keyList.Find(x => x.name == "Box").isInteracted)
+        //{
+        //    currRoom = 1;
+        //}
+        //if(global_init.keyList.Find(x => x.name == "Trophy").isInteracted)
+        //{
+        //    currRoom = 2;
+        //}
+        //if(global_init.keyList.Find(x => x.name == "Notepad").isInteracted)
+        //{
+        //    currRoom = 3;
+        //}
+        //if(global_init.keyList.Find(x => x.name == "Blox").isInteracted)
+        //{
+        //    currRoom = 0;
+        //}
+        //updateSet(currRoom);
     }
 
     [HideInInspector]

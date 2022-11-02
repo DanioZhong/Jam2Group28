@@ -145,7 +145,7 @@ public class Spawner : MonoBehaviour
             turnOnFurnitureSpawn = true;
             furnitureSetGenerate = false;
             enableGenerate = false;
-            generateRoomDown();
+            generateRoom();
             generateTrigger();
 
             destroySpawnedObj();
@@ -198,12 +198,12 @@ public class Spawner : MonoBehaviour
             //put assign default room
             if (prefabs_rooms[i].name == "Bedroom")
             {
-                //defaultRoom = prefabs_rooms[i];
-                defaultRoom =  (GameObject)Resources.Load("Prefabs/Room/Bedroom", typeof(GameObject));
+                defaultRoom = prefabs_rooms[i];
+                //defaultRoom =  (GameObject)Resources.Load("Prefabs/Room/Bedroom", typeof(GameObject));
             }else if (prefabs_rooms[i].name == "Staircase")
             {
-                //defaultStairs = prefabs_rooms[i];
-                defaultStairs =  (GameObject)Resources.Load("Prefabs/Room/Staircase", typeof(GameObject));
+                defaultStairs = prefabs_rooms[i];
+                //defaultStairs =  (GameObject)Resources.Load("Prefabs/Room/Staircase", typeof(GameObject));
             }
         }
     }
@@ -248,7 +248,7 @@ public class Spawner : MonoBehaviour
     }
 
 
-    void generateRoomDown()
+    void generateRoom()
     {
 
 
@@ -261,7 +261,7 @@ public class Spawner : MonoBehaviour
             //spawnPos.y += roomPosChange.y;
             spawnPos += roomPosChange;
             Debug.Log("RoomSpawn");
-            GameObject newRoom = Instantiate(defaultRoom, spawnPos, Quaternion.Euler(0, -90, 0));
+            GameObject newRoom = Instantiate(defaultRoom, spawnPos, Quaternion.Euler(0, 90, 0));
             rooms.Add(newRoom);
             currentPos_Room = spawnPos;
             Debug.Log(currentPos_Room);
