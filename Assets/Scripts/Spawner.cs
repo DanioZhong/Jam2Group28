@@ -423,11 +423,11 @@ public class Spawner : MonoBehaviour
         // rooms.RemoveAt(0);
         // furnitureSets.RemoveAt(0);
 
-        if (stairs.Count > 2)
-        {
-           GameObject.Destroy(stairs[0]);
-           stairs.RemoveAt(0);
-        }
+        // if (stairs.Count > 2)
+        // {
+        //    GameObject.Destroy(stairs[0]);
+        //    stairs.RemoveAt(0);
+        // }
 
         if (generateDown)
         {
