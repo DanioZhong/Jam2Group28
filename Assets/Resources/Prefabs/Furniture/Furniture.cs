@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Furniture : MonoBehaviour
 {
-    public int type = 0;
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private string prompt;
+    public string InteractionPrompt => prompt;
+
+    [SerializeField] private string text;
+    public string paragraphText => text;
+
+    public bool Interact(Interactor interactor)
     {
-        
+        Debug.Log(message: "Opening Piano!");
+        return true;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

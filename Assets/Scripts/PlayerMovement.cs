@@ -57,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
     GameObject thirdPerson_Camera;
     Transform cam;
 
+    bool hasInteracted = false;
 
 
      
@@ -159,42 +160,34 @@ public class PlayerMovement : MonoBehaviour
 
             if (hitCollider.tag == "triggers")
             {
-           
                 spawner_script.enableGenerate = true;
-              
-
-                // Debug.Log("Hye" + spawner_script.enableGenerate);
-                //some old code about teleporting
-                ////random teleport to any doors except the current one
-                ////validation check if it's going to teleport to the same door
-                //do
-                //{
-                //    tempCount = Random.Range(0, gobal_init.teleportersList.Count());
-
-                //} while (hitCollider.name == gobal_init.teleportersList[tempCount].name);
-                ////get direction location and start teleport
-                //teleportPos = gobal_init.teleportersList[tempCount].transform.position;
-                //teleportPos.y = 0.1f;
-
-                //if (gobal_init.teleportersList[tempCount].name == "Door01")
-                //{
-                //    teleportPos.z += 2f;
-                //}
-                //else if (gobal_init.teleportersList[tempCount].name == "Door02")
-                //{
-                //    teleportPos.x -= 2f;
-                //}
-                //StartCoroutine("Teleport");
-
-
+                spawner_script.generateUp = false;
+                spawner_script.generateDown = true;
+            }
+            else if(hitCollider.tag == "triggersUp")
+            {
+                spawner_script.enableGenerate = true;
+                spawner_script.generateDown = false;
+                spawner_script.generateUp = true;
+            }else if (hitCollider.tag == "triggerSet" && hasInteracted == false)
+            {
+                //Debug.Log("generate set");
+                spawner_script.furnitureSetGenerate = true;
+                hasInteracted = true;
+                StartCoroutine(waitThreeSecond());
             }
             else
             {
-                //spawner_script.enableGenerate = false;
+
             }
         }
     }
 
+    IEnumerator waitThreeSecond()
+    {
+        yield return new WaitForSeconds(1);
+        hasInteracted = false;
+    }
 
     void jumpFeature()
     {

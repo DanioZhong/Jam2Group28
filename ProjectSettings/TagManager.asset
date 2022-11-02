@@ -7,6 +7,8 @@ TagManager:
   - Movable Objects
   - triggers
   - keys
+  - triggersUp
+  - triggerSet
   layers:
   - Default
   - TransparentFX

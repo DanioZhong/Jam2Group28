@@ -35,10 +35,8 @@ public class Interactor : MonoBehaviour
             if (interactable != null)
             {
                
-
                 if (!_interactionPromptUI.IsDisplayed) _interactionPromptUI.SetUp(interactable.InteractionPrompt);
-
-                //if (Input.GetKeyDown(KeyCode.E)) interactable.Interact(interactor: this);
+                if (Input.GetKeyDown(KeyCode.Q)) interactable.Interact(interactor: this);
                 if (Input.GetKeyDown(KeyCode.E)) _interactionPromptUI.NoteSetUp(interactable.paragraphText);
             }
             
@@ -47,6 +45,7 @@ public class Interactor : MonoBehaviour
         {
             if (interactable != null) interactable = null;
             if (_interactionPromptUI.IsDisplayed) _interactionPromptUI.Close();
+
         }
     }
 
