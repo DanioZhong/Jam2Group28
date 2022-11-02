@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KidBuildingBlox: MonoBehaviour, IInteractable
+public class Key: MonoBehaviour, IInteractable
 {
     public string keyName;
     [SerializeField] private string prompt;
