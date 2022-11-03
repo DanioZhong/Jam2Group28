@@ -26,7 +26,7 @@ public class Initialization : MonoBehaviour
 
 
         tempKey = new keyObjects();
-        tempKey.name = "Trophy";
+        tempKey.name = "Journal";
         tempKey.isInteracted = false;
         tempKey.obj = null;
         keyList.Add(tempKey);
@@ -38,6 +38,11 @@ public class Initialization : MonoBehaviour
         tempKey.obj = null;
         keyList.Add(tempKey);
 
+        tempKey = new keyObjects();
+        tempKey.name = "Flag";
+        tempKey.isInteracted = false;
+        tempKey.obj = null;
+        keyList.Add(tempKey);
 
         tempKey = new keyObjects();
         tempKey.name = "Box";

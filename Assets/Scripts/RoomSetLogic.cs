@@ -14,7 +14,7 @@ public class RoomSetLogic : MonoBehaviour
 
     [HideInInspector]
     public void NextRoomCheck(){ // Won't be called due to destroying
-
+        // Look at this!
         //Debug.Log("run run run");
         //global = GameObject.Find("Global");
         //global_init = global.GetComponent<Initialization>();
@@ -23,7 +23,7 @@ public class RoomSetLogic : MonoBehaviour
         //{
         //    currRoom = 1;
         //}
-        //if(global_init.keyList.Find(x => x.name == "Trophy").isInteracted)
+        //if(global_init.keyList.Find(x => x.name == "Flag").isInteracted)
         //{
         //    currRoom = 2;
         //}
@@ -34,6 +34,10 @@ public class RoomSetLogic : MonoBehaviour
         //if(global_init.keyList.Find(x => x.name == "Blox").isInteracted)
         //{
         //    currRoom = 0;
+        //}
+                //if(global_init.keyList.Find(x => x.name == "Journal").isInteracted)
+        //{
+        //    currRoom = 0; // Start Ending sequence
         //}
         //updateSet(currRoom);
     }
