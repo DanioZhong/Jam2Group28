@@ -112,6 +112,8 @@ public class Spawner : MonoBehaviour
         currentPos_TriggerSet = initialObjects[6].transform.position;
         currentPos_TriggerSetUp = initialObjects[7].transform.position;
 
+        roomPosChange =  currentPos_Stairs - currentPos_StairsUp;
+
         //push them into the list and remove from current list after getting the current pos
         rooms.Add(initialObjects[0]);
         stairs.Add(initialObjects[1]);
