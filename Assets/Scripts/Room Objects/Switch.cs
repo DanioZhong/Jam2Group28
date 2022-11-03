@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Trophy : MonoBehaviour, IInteractable
+public class Switch : MonoBehaviour, IInteractable
 {
     [SerializeField] private string prompt;
     public string InteractionPrompt => prompt;
@@ -12,8 +12,7 @@ public class Trophy : MonoBehaviour, IInteractable
 
     public bool Interact(Interactor interactor)
     {
-        Debug.Log(message: "Opening Trophy!");
+        Debug.Log(message: "Opening switch!");
         return true;
     }
-
 }
