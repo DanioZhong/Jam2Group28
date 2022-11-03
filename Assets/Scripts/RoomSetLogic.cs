@@ -30,10 +30,12 @@ public class RoomSetLogic : MonoBehaviour
         if (global_init.keyList.Find(x => x.name == "Notepad").isInteracted)
         {
             currRoom = 3;
+            transform.GetChild(5).gameObject.SetActive(false);
         }
         if (global_init.keyList.Find(x => x.name == "Blox").isInteracted)
         {
             currRoom = 4;
+            transform.GetChild(5).gameObject.SetActive(true);
         }
         if (global_init.keyList.Find(x => x.name == "Journal").isInteracted)
         {
