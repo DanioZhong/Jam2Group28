@@ -14,28 +14,33 @@ public class RoomSetLogic : MonoBehaviour
 
     [HideInInspector]
     public void NextRoomCheck(){ // Won't be called due to destroying
+        // Look at this!
+        Debug.Log("Generate Room " + currRoom);
+        global = GameObject.Find("Global");
+        global_init = global.GetComponent<Initialization>();
 
-        //Debug.Log("run run run");
-        //global = GameObject.Find("Global");
-        //global_init = global.GetComponent<Initialization>();
-
-        //if (global_init.keyList.Find(x => x.name == "Box").isInteracted)
-        //{
-        //    currRoom = 1;
-        //}
-        //if(global_init.keyList.Find(x => x.name == "Trophy").isInteracted)
-        //{
-        //    currRoom = 2;
-        //}
-        //if(global_init.keyList.Find(x => x.name == "Notepad").isInteracted)
-        //{
-        //    currRoom = 3;
-        //}
-        //if(global_init.keyList.Find(x => x.name == "Blox").isInteracted)
-        //{
-        //    currRoom = 0;
-        //}
-        //updateSet(currRoom);
+        if (global_init.keyList.Find(x => x.name == "Box").isInteracted)
+        {
+            currRoom = 1;
+        }
+        if (global_init.keyList.Find(x => x.name == "Flag").isInteracted)
+        {
+            currRoom = 2;
+        }
+        if (global_init.keyList.Find(x => x.name == "Notepad").isInteracted)
+        {
+            currRoom = 3;
+        }
+        if (global_init.keyList.Find(x => x.name == "Blox").isInteracted)
+        {
+            currRoom = 4;
+        }
+        if (global_init.keyList.Find(x => x.name == "Journal").isInteracted)
+        {
+            currRoom = -1;
+            global_init.playEnding();
+        }
+        updateSet(currRoom);
     }
 
     [HideInInspector]
@@ -57,23 +62,10 @@ public class RoomSetLogic : MonoBehaviour
         }
         else
         {
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < 5; i++)
             {
                 transform.GetChild(i).gameObject.SetActive(true);
             }
         }
-
-
-
-
-        ////Debug.Log("PPP" + room.ToString());
-        //int i = 0;
-        //foreach(Transform child in transform){
-        //    if (i == room)
-        //        child.gameObject.SetActive(true);
-        //    else
-        //        child.gameObject.SetActive(false);
-        //    i++;
-        //}
     }
 }
