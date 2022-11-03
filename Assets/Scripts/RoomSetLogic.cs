@@ -38,7 +38,7 @@ public class RoomSetLogic : MonoBehaviour
         if (global_init.keyList.Find(x => x.name == "Journal").isInteracted)
         {
             currRoom = -1;
-            global_init.playEnding();
+
         }
         updateSet(currRoom);
     }
@@ -48,7 +48,7 @@ public class RoomSetLogic : MonoBehaviour
 
         if(currRoom != -1)
         {
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 5; i++)
             {
                 if (i == room)
                 {

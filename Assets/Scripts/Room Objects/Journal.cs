@@ -24,6 +24,7 @@ public class Journal : MonoBehaviour, IInteractable
 
     public bool Interact(Interactor interactor)
     {
+        global_init.playEnding();
 
         global_init.keyList.Find(x => x.name == "Journal").isInteracted = true;
 
