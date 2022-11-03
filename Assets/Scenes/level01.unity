@@ -1487,7 +1487,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643253170}
-  m_LocalRotation: {x: 0.13245326, y: 0.00000000852739, z: -0.0000000011395208, w: 0.9911893}
+  m_LocalRotation: {x: 0.13245326, y: -0.000000008527389, z: 0.0000000011395206, w: 0.9911893}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1576,16 +1576,6 @@ PrefabInstance:
       propertyPath: text
       value: "That\u2019s my journal.<br><br>Though there\u2019s Nothing for me to
         write about right now."
-      objectReference: {fileID: 0}
-    - target: {fileID: 5770888491862847782, guid: 9eb802c19560f8d46801430f436ee6a3, type: 3}
-      propertyPath: text
-      value: "I\u2019ll read mom\u2019s note later. I don\u2019t know why she put
-        this in my room, I definitely won\u2019t decorate for Christmas. It always
-        just felt like a chore anyways, having to decorate for a holiday that ends
-        up feeling like any other day. Well, there\u2019s the added benefit of maybe
-        getting a gift or something, but I\u2019d have to buy someone else something
-        as well. Joel would have enjoyed this more, but he moved out a long time
-        ago and luckily for him didn\u2019t have to move back in."
       objectReference: {fileID: 0}
     - target: {fileID: 5856474566550028774, guid: 9eb802c19560f8d46801430f436ee6a3, type: 3}
       propertyPath: m_IsActive
@@ -2397,7 +2387,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
+  m_fontSizeMin: 12
   m_fontSizeMax: 40
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -4398,7 +4388,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
+  m_fontSizeMin: 12
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -4714,7 +4704,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1988580294}
-  m_LocalRotation: {x: 0.16837077, y: 0.00000001696074, z: -0.0000000028970515, w: 0.9857238}
+  m_LocalRotation: {x: 0.16837077, y: -0.00000001696074, z: 0.0000000028970515, w: 0.9857238}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5208,7 +5198,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4206028125981673982, guid: 959e4155fbff07b4d8267ff8f2ab7a66, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.526539
+      value: 4.1748533
       objectReference: {fileID: 0}
     - target: {fileID: 4206028125981673982, guid: 959e4155fbff07b4d8267ff8f2ab7a66, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5220,7 +5210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4206028125981673982, guid: 959e4155fbff07b4d8267ff8f2ab7a66, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.4751
+      value: 1.2993
       objectReference: {fileID: 0}
     - target: {fileID: 4206028125981673982, guid: 959e4155fbff07b4d8267ff8f2ab7a66, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5534,15 +5524,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 423204124383966659, guid: feb6f55772c8a2d4eaa689aaac1d8936, type: 3}
       propertyPath: m_LocalScale.x
-      value: 6.0322824
+      value: 5.395552
       objectReference: {fileID: 0}
     - target: {fileID: 423204124383966659, guid: feb6f55772c8a2d4eaa689aaac1d8936, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.6708705
+      value: 4.3826313
       objectReference: {fileID: 0}
     - target: {fileID: 423204124383966659, guid: feb6f55772c8a2d4eaa689aaac1d8936, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.6426
+      value: -0.961
       objectReference: {fileID: 0}
     - target: {fileID: 423204124383966659, guid: feb6f55772c8a2d4eaa689aaac1d8936, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5550,7 +5540,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 423204124383966659, guid: feb6f55772c8a2d4eaa689aaac1d8936, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.5813
+      value: 5.7255
       objectReference: {fileID: 0}
     - target: {fileID: 423204124383966659, guid: feb6f55772c8a2d4eaa689aaac1d8936, type: 3}
       propertyPath: m_LocalRotation.w
