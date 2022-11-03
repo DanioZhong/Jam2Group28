@@ -268,7 +268,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 63745509}
-  m_LocalRotation: {x: 0.15041308, y: 0.00000001701063, z: -0.000000002588065, w: 0.98862326}
+  m_LocalRotation: {x: 0.15041308, y: -0.000000017010626, z: 0.0000000025880647, w: 0.98862326}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -930,8 +930,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: afa4d34339dfd5d45896cd93bde8f4af, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1487,7 +1487,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643253170}
-  m_LocalRotation: {x: 0.13245326, y: 0.00000000852739, z: -0.0000000011395208, w: 0.9911893}
+  m_LocalRotation: {x: 0.13245326, y: -0.000000008527389, z: 0.0000000011395206, w: 0.9911893}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1572,9 +1572,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5770888491862847782, guid: 9eb802c19560f8d46801430f436ee6a3, type: 3}
+      propertyPath: text
+      value: "I\u2019ll read mom\u2019s note later. I don\u2019t know why she put
+        this in my room, I definitely won\u2019t decorate for Christmas. It always
+        just felt like a chore anyways, having to decorate for a holiday that ends
+        up feeling like any other day. Well, there\u2019s the added benefit of maybe
+        getting a gift or something, but I\u2019d have to buy someone else something
+        as well. Joel would have enjoyed this more, but he moved out a long time
+        ago and luckily for him didn\u2019t have to move back in."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5856474566550028774, guid: 9eb802c19560f8d46801430f436ee6a3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5913918031518666355, guid: 9eb802c19560f8d46801430f436ee6a3, type: 3}
       propertyPath: m_Name
       value: SceneSets
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313178061008117078, guid: 9eb802c19560f8d46801430f436ee6a3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313178061008117078, guid: 9eb802c19560f8d46801430f436ee6a3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -8.19
       objectReference: {fileID: 0}
     - target: {fileID: 7863266187161011891, guid: 9eb802c19560f8d46801430f436ee6a3, type: 3}
       propertyPath: m_RootOrder
@@ -1619,6 +1641,10 @@ PrefabInstance:
     - target: {fileID: 7863266187161011891, guid: 9eb802c19560f8d46801430f436ee6a3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7922823826187913384, guid: 9eb802c19560f8d46801430f436ee6a3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eb802c19560f8d46801430f436ee6a3, type: 3}
@@ -1808,7 +1834,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionPoint: {fileID: 955279785}
-  interactionPointRadius: 0.77
+  interactionPointRadius: 0.7
   interactableMask:
     serializedVersion: 2
     m_Bits: 128
@@ -2148,8 +2174,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -210.23}
-  m_SizeDelta: {x: 889.28, y: 420.45}
+  m_AnchoredPosition: {x: -2.8649, y: -210.70497}
+  m_SizeDelta: {x: 790.2874, y: 345.2201}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &948302334
 MonoBehaviour:
@@ -2171,7 +2197,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Note\nHere is a simple message
+  m_text: "November 12th, 2022. \\nYou know what, now that I think about it my mom
+    always expected way too much from me. No wonder I feel so shitty dropping out
+    of college. It was never for me, I never even wanted to go!  \\n I have so many
+    talents that I\u2019m proud of. Sure I\u2019m not the best student, but that
+    doesn\u2019t mean I dont have so many other skills that other people would be
+    jealous of.   \\nI am enough.  \\nI am worthy of appreciation  \\nAnd I\u2019m
+    proud of myself. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2180,8 +2212,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4286101445
+  m_fontColor: {r: 0.7735849, g: 0.71924424, b: 0.4699893, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2198,14 +2230,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 27.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 40
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2394,7 +2426,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.1504131, y: 0.0000000370738, z: -0.000000005640556, w: 0.98862326}
+  m_LocalRotation: {x: 0.1504131, y: -0.0000000370738, z: 0.000000005640556, w: 0.98862326}
   m_LocalPosition: {x: 7.0363474, y: 10.209318, z: -9.575674}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4180,8 +4212,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4285574071
+  m_fontColor: {r: 0.7176471, g: 0.67058825, b: 0.43921572, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4518,7 +4550,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1988580294}
-  m_LocalRotation: {x: 0.16837077, y: 0.00000001696074, z: -0.0000000028970515, w: 0.9857238}
+  m_LocalRotation: {x: 0.16837077, y: -0.00000001696074, z: 0.0000000028970515, w: 0.9857238}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4679,8 +4711,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: afa4d34339dfd5d45896cd93bde8f4af, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

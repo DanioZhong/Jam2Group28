@@ -540,7 +540,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: dd3a35b7647579c4286c811041595e26, type: 3}
   m_PrefabInstance: {fileID: 708485890198204050}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7997628391085383646
+--- !u!64 &591266399632520898
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366029586383688643}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: dd3a35b7647579c4286c811041595e26, type: 3}
+--- !u!114 &3767324750500237174
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -549,11 +563,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 366029586383688643}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6209c657994ad4243a81d7fd7ef89db4, type: 3}
+  m_Script: {fileID: 11500000, guid: fc7d378d449cb104dad7ac1a36ad15a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   prompt: Picture Frame
-  text: 
+  text: A picture from our trip to Disneyland. That was probably the last time we
+    ever did anything together as a family.
 --- !u!4 &1035745814571288953 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dd3a35b7647579c4286c811041595e26, type: 3}
@@ -1214,7 +1229,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prompt: '**Journal**'
-  text: 
+  text: "November 12th, 2022. \\nYou know what, now that I think about it my mom
+    always expected way too much from me. No wonder I feel so shitty dropping out
+    of college. It was never for me, I never even wanted to go!  \\n I have so many
+    talents that I\u2019m proud of. Sure I\u2019m not the best student, but that
+    doesn\u2019t mean I dont have so many other skills that other people would be
+    jealous of.   \\nI am enough.  \\nI am worthy of appreciation  \\nAnd I\u2019m
+    proud of myself. "
 --- !u!1001 &5478708095389725250
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1710,7 +1731,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prompt: Moving Boxes
-  text: 
+  text: "Most of the stuff I have yet to unpack are still in here. I really should
+    be unpacking right now but the weight of staying here really hasn\u2019t hit
+    me yet. I just know the moment I begin unpacking though, it\u2019ll just weigh
+    me down like a ton of bricks. I wish this wasn\u2019t the case."
 --- !u!1001 &5770888491862847778
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1825,7 +1849,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prompt: '*Box of Christmas Decorations*'
-  text: 
+  text: "I\u2019ll read mom\u2019s note later. I don\u2019t know why she put this
+    in my room, I definitely won\u2019t decorate for Christmas. It always just felt
+    like a chore anyways, having to decorate for a holiday that ends up feeling like
+    any other day. Well, there\u2019s the added benefit of maybe getting a gift or
+    something, but I\u2019d have to buy someone else something as well. Joel would
+    have enjoyed this more, but he moved out a long time ago and luckily for him
+    didn\u2019t have to move back in."
 --- !u!1001 &5770888492008667837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1940,7 +1970,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prompt: Moving Boxes
-  text: 
+  text: "Most of the stuff I have yet to unpack are still in here. I really should
+    be unpacking right now but the weight of staying here really hasn\u2019t hit
+    me yet. I just know the moment I begin unpacking though, it\u2019ll just weigh
+    me down like a ton of bricks. I wish this wasn\u2019t the case."
 --- !u!1001 &5770888492045106369
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2028,6 +2061,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 44c724034efc47441a27ca29b833fbbd, type: 3}
   m_PrefabInstance: {fileID: 5770888492045106369}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &6409316614409409252
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6689878804064747920}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: 44c724034efc47441a27ca29b833fbbd, type: 3}
 --- !u!114 &2312738835197796140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2041,7 +2088,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prompt: Christmas Card
-  text: 
+  text: Oh yeah, this was the Christmas that Mom thought I was too old to get presents,
+    so they left this card for me on the dining room table and called it a day.
 --- !u!1001 &5770888492270745873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2257,7 +2305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prompt: Stuffed Animal
-  text: 
+  text: Honestly, sometimes it felt like this bunny loved me more than my Mom.
 --- !u!1001 &5770888492489119649
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2877,7 +2925,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prompt: Moving Boxes
-  text: 
+  text: "Most of the stuff I have yet to unpack are still in here. I really should
+    be unpacking right now but the weight of staying here really hasn\u2019t hit
+    me yet. I just know the moment I begin unpacking though, it\u2019ll just weigh
+    me down like a ton of bricks. I wish this wasn\u2019t the case."
 --- !u!1001 &5770888492815877560
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3093,7 +3144,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prompt: '* Notepad *'
-  text: 
+  text: "Oh I used to love drawing on this when I was little! I remember drawing
+    so many characters for this world that I created in my head. I would just doodle
+    on this thing for hours and hours at a time until my mom would yell at me to
+    put it away. It really was my safety net, I wonder what happened to it. I don\u2019t
+    actually remember specifically when I stopped drawing, I guess it just faded
+    with time."
 --- !u!1001 &5770888492947471223
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3254,7 +3310,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prompt: '* Blox *'
-  text: 
+  text: "\u201CHe\u2019s already 18 months and he can\u2019t even put the blocks
+    in order yet. I just don\u2019t know if I have what it takes to grow him into
+    a successful adult\u2026 I know, I know. I just hope he grows out of it soon.\u201D"
 --- !u!1001 &5770888493173018674
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3571,7 +3629,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prompt: Piano
-  text: 
+  text: I remember spending countless hours on this keyboard just learning new pieces.
+    It was exciting at first but it just never became fun for me. My mom used to
+    make me play for at least two hours a day to hone my skills, never went too far
+    though.
 --- !u!1001 &5770888493371488051
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3686,7 +3747,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prompt: Trophy
-  text: 
+  text: "Ahhh, the reward for the middle school spelling bee. I was actually extremely
+    surprised I won this one. I had spent hours upon hours of just looking at words
+    so much so that they all seemed to blend in together at one point. Seeing my
+    mom\u2019s proud smile made so happy, but damn did I have to suffer."
 --- !u!1001 &5770888493387332735
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3801,7 +3865,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prompt: Laptop
-  text: 
+  text: "I probably shouldn\u2019t start up my laptop right now. I don\u2019t want
+    to look at all the tabs that I still haven\u2019t closed. Most of it is just
+    depressing. I can only look at those dropping out frequently asked questions
+    pages for so long until reality starts setting in. "
 --- !u!1001 &5770888493578784564
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4091,6 +4158,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 67fd543b75847f54f92a209760d07c31, type: 3}
   m_PrefabInstance: {fileID: 5989685413231188098}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &7656719621527236572
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6908182044664587731}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: 67fd543b75847f54f92a209760d07c31, type: 3}
 --- !u!114 &3542030286663226262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4104,7 +4185,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prompt: TV Dinner
-  text: 
+  text: Damn, I hated those tv dinners. But Mom worked a lot so I had to make dinner
+    for myself all the time.
 --- !u!1001 &6056509353776461890
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4320,7 +4402,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prompt: Textbook
-  text: 
+  text: "Ugh, my biochem book. I remember taking that class before changing my major
+    the first time. It was the worst experience I\u2019ve ever had. Maybe I can sell
+    this to get some money back. "
 --- !u!1001 &7282890954162878343
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4408,20 +4492,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 198187eb7a7949849bf0bdd300529fe9, type: 3}
   m_PrefabInstance: {fileID: 7282890954162878343}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8426746709006073822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7625561109634058966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6209c657994ad4243a81d7fd7ef89db4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prompt: Journal
-  text: 
 --- !u!64 &4587009135548228144
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4436,6 +4506,21 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 198187eb7a7949849bf0bdd300529fe9, type: 3}
+--- !u!114 &2046423563601155584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7625561109634058966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cda5318fc65f2084eb1c06125ffaf641, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prompt: Journal
+  text: "That\u2019s my journal.\\n\\nThough there\u2019s Nothing for me to write
+    about right now."
 --- !u!1001 &7867225855773745380
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4545,7 +4630,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prompt: '*Flag*'
-  text: 
+  text: "My mom always wanted me to go to UC Berkeley like my older brother. My freshman
+    year of high school she came home from work with a big bag of UC Berkeley merch
+    and said that she\u2019d give me the rest of it my first day of college."
 --- !u!4 &7684470577646847759 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d2d09818103e3ee44a63d99f35890edb, type: 3}
@@ -4761,7 +4848,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prompt: Switch
-  text: 
+  text: "I loved playing on this when I was younger. I got it after getting my trophy
+    as a reward and I was so excited! I only got around half an hour of play time
+    each day though. At least that\u2019s what my mom thought anyway."
 --- !u!4 &8825655751100710751 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8afcaa810ff5d7d47b36daf0b262cfd0, type: 3}
