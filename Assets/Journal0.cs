@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Journal0 : MonoBehaviour
+public class Journal0 : MonoBehaviour, IInteractable
 {
     [SerializeField] private string prompt;
     public string InteractionPrompt => prompt;
