@@ -268,7 +268,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 63745509}
-  m_LocalRotation: {x: 0.15041308, y: -0.000000017010626, z: 0.0000000025880647, w: 0.98862326}
+  m_LocalRotation: {x: 0.15041308, y: 0.00000001701063, z: -0.000000002588065, w: 0.98862326}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1572,6 +1572,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2046423563601155584, guid: 9eb802c19560f8d46801430f436ee6a3, type: 3}
+      propertyPath: text
+      value: "That\u2019s my journal.<br><br>Though there\u2019s Nothing for me to
+        write about right now."
+      objectReference: {fileID: 0}
     - target: {fileID: 5770888491862847782, guid: 9eb802c19560f8d46801430f436ee6a3, type: 3}
       propertyPath: text
       value: "I\u2019ll read mom\u2019s note later. I don\u2019t know why she put
@@ -1641,6 +1646,16 @@ PrefabInstance:
     - target: {fileID: 7863266187161011891, guid: 9eb802c19560f8d46801430f436ee6a3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7877681909492588556, guid: 9eb802c19560f8d46801430f436ee6a3, type: 3}
+      propertyPath: text
+      value: "November 12th, 2022. <br>You know what, now that I think about it my
+        mom always expected way too much from me. No wonder I feel so shitty dropping
+        out of college. It was never for me, I never even wanted to go!  <br>I have
+        so many talents that I\u2019m proud of. Sure I\u2019m not the best student,
+        but that doesn\u2019t mean I dont have so many other skills that other people
+        would be jealous of.   <br>I am enough.  <br>I am worthy of appreciation 
+        \\nAnd I\u2019m proud of myself. "
       objectReference: {fileID: 0}
     - target: {fileID: 7922823826187913384, guid: 9eb802c19560f8d46801430f436ee6a3, type: 3}
       propertyPath: m_IsActive
@@ -2426,7 +2441,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.1504131, y: -0.0000000370738, z: 0.000000005640556, w: 0.98862326}
+  m_LocalRotation: {x: 0.1504131, y: 0.0000000370738, z: -0.000000005640556, w: 0.98862326}
   m_LocalPosition: {x: 7.0363474, y: 10.209318, z: -9.575674}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
