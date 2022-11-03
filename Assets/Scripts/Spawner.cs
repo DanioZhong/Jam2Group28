@@ -145,7 +145,7 @@ public class Spawner : MonoBehaviour
             turnOnFurnitureSpawn = true;
             furnitureSetGenerate = false;
             enableGenerate = false;
-            generateRoomDown();
+            generateRoom();
             generateTrigger();
 
             destroySpawnedObj();
@@ -163,7 +163,7 @@ public class Spawner : MonoBehaviour
         if (furnitureSetGenerate && turnOnFurnitureSpawn)
         {
 
-            Debug.Log(" generate next");
+            //Debug.Log(" generate next");
             generateFurniture();
             furnitureSetGenerate = false;
             turnOnFurnitureSpawn = false;
@@ -171,7 +171,7 @@ public class Spawner : MonoBehaviour
         }else if(turnOnFurnitureSpawn == false && furnitureSetGenerate)
         {
             //
-            Debug.Log("changing room");
+            //Debug.Log("changing room");
             //change furniture for all room
             foreach (GameObject furniture in furnitureSets)
             {
@@ -196,12 +196,14 @@ public class Spawner : MonoBehaviour
         for (int i = 0; i < prefabs_rooms.Count; i++)
         {
             //put assign default room
-            if (prefabs_rooms[i].name == "Room")
+            if (prefabs_rooms[i].name == "Bedroom")
             {
                 defaultRoom = prefabs_rooms[i];
-            }else if (prefabs_rooms[i].name == "Stairs")
+                //defaultRoom =  (GameObject)Resources.Load("Prefabs/Room/Bedroom", typeof(GameObject));
+            }else if (prefabs_rooms[i].name == "Staircase")
             {
                 defaultStairs = prefabs_rooms[i];
+                //defaultStairs =  (GameObject)Resources.Load("Prefabs/Room/Staircase", typeof(GameObject));
             }
         }
     }
@@ -237,7 +239,7 @@ public class Spawner : MonoBehaviour
         for (int i = 0; i < prefabs_keys.Count; i++)
         {
             //put assign default room
-            if (prefabs_keys[i].name == "Furniture Sets")
+            if (prefabs_keys[i].name == "SceneSets")
             {
                 defaultFurnitureSets = prefabs_keys[i];
                 
@@ -246,7 +248,7 @@ public class Spawner : MonoBehaviour
     }
 
 
-    void generateRoomDown()
+    void generateRoom()
     {
 
 
@@ -255,22 +257,28 @@ public class Spawner : MonoBehaviour
             //make a room down
             //increment init_pos (for new room)
             spawnPos = currentPos_Room;
-            spawnPos.x += roomPosChange.x;
-            spawnPos.y += roomPosChange.y;
-            GameObject newRoom = Instantiate(defaultRoom, spawnPos, Quaternion.Euler(0, 0, 0));
+            //spawnPos.x += roomPosChange.x;
+            //spawnPos.y += roomPosChange.y;
+            spawnPos += roomPosChange;
+            Debug.Log("RoomSpawn");
+            GameObject newRoom = Instantiate(defaultRoom, spawnPos, Quaternion.Euler(0, 90, 0));
             rooms.Add(newRoom);
             currentPos_Room = spawnPos;
+            Debug.Log(currentPos_Room);
             //make a stair
             spawnPos = currentPos_Stairs;
-            spawnPos.x += roomPosChange.x;
-            spawnPos.y += roomPosChange.y;
-            GameObject newStairs = Instantiate(defaultStairs, spawnPos, Quaternion.Euler(0, -90, 0));
+            //spawnPos.x += roomPosChange.x;
+            //spawnPos.y += roomPosChange.y;
+            spawnPos += roomPosChange;
+            GameObject newStairs = Instantiate(defaultStairs, spawnPos, Quaternion.Euler(0, 0, 0));
             stairs.Add(newStairs);
             currentPos_Stairs = spawnPos;
+            
             //make checker
             spawnPos = currentPos_TriggerSet;
-            spawnPos.x += roomPosChange.x;
-            spawnPos.y += roomPosChange.y;
+            //spawnPos.x += roomPosChange.x;
+            //spawnPos.y += roomPosChange.y;
+            spawnPos += roomPosChange;
             GameObject newTriggerSet = Instantiate(TriggerSetChange, spawnPos, Quaternion.Euler(0, 0, 0));
             triggersSet.Add(newTriggerSet);
             currentPos_TriggerSet = spawnPos;
@@ -280,22 +288,25 @@ public class Spawner : MonoBehaviour
             //make a room down
             //increment init_pos (for new room)
             spawnPos = currentPos_RoomUp;
-            spawnPos.x -= roomPosChange.x;
-            spawnPos.y -= roomPosChange.y;
-            GameObject newRoom = Instantiate(defaultRoom, spawnPos, Quaternion.Euler(0, 0, 0));
+            //spawnPos.x -= roomPosChange.x;
+            //spawnPos.y -= roomPosChange.y;
+            spawnPos -= roomPosChange;
+            GameObject newRoom = Instantiate(defaultRoom, spawnPos, Quaternion.Euler(0, 90, 0));
             rooms.Add(newRoom);
             currentPos_RoomUp = spawnPos;
             //make a stair
             spawnPos = currentPos_StairsUp;
-            spawnPos.x -= roomPosChange.x;
-            spawnPos.y -= roomPosChange.y;
-            GameObject newStairs = Instantiate(defaultStairs, spawnPos, Quaternion.Euler(0, -90, 0));
+            //spawnPos.x -= roomPosChange.x;
+            //spawnPos.y -= roomPosChange.y;
+            spawnPos -= roomPosChange;
+            GameObject newStairs = Instantiate(defaultStairs, spawnPos, Quaternion.Euler(0, 0, 0));
             stairsUp.Add(newStairs);
             currentPos_StairsUp = spawnPos;
             //make checker
             spawnPos = currentPos_TriggerSetUp;
-            spawnPos.x -= roomPosChange.x;
-            spawnPos.y -= roomPosChange.y;
+            //spawnPos.x -= roomPosChange.x;
+            //spawnPos.y -= roomPosChange.y;
+            spawnPos -= roomPosChange;
             GameObject newTriggerSetUp = Instantiate(TriggerSetChange, spawnPos, Quaternion.Euler(0, 0, 0));
             triggersSetUp.Add(newTriggerSetUp);
             currentPos_TriggerSetUp = spawnPos;
@@ -312,7 +323,7 @@ public class Spawner : MonoBehaviour
 
 
 
-        Debug.Log("yes");
+        //Debug.Log("yes");
 
 
 
@@ -320,8 +331,9 @@ public class Spawner : MonoBehaviour
         {
             //make furniture set
             spawnPos = currentPos_FurnitureSets;
-            spawnPos.x += roomPosChange.x;
-            spawnPos.y += roomPosChange.y;
+            //spawnPos.x += roomPosChange.x;
+            //spawnPos.y += roomPosChange.y;
+            spawnPos += roomPosChange;
             GameObject newSet = Instantiate(defaultFurnitureSets, spawnPos, Quaternion.Euler(0, 0, 0));
             furnitureSets.Add(newSet);
             currentPos_FurnitureSets = spawnPos;
@@ -332,8 +344,9 @@ public class Spawner : MonoBehaviour
         {
             //make furniture set
             spawnPos = currentPos_FurnitureSetsUp;
-            spawnPos.x -= roomPosChange.x;
-            spawnPos.y -= roomPosChange.y;
+            //spawnPos.x -= roomPosChange.x;
+            //spawnPos.y -= roomPosChange.y;
+            spawnPos -= roomPosChange;
             GameObject newSet = Instantiate(defaultFurnitureSets, spawnPos, Quaternion.Euler(0, 0, 0));
             furnitureSets.Add(newSet);
             currentPos_FurnitureSetsUp = spawnPos;
@@ -353,8 +366,9 @@ public class Spawner : MonoBehaviour
         {
             //make a trigger down
             spawnPos = currentPos_Trigger;
-            spawnPos.x += roomPosChange.x;
-            spawnPos.y += roomPosChange.y;
+            //spawnPos.x += roomPosChange.x;
+            //spawnPos.y += roomPosChange.y;
+            spawnPos += roomPosChange;
             GameObject newTrigger = Instantiate(defaultTrigger, spawnPos, Quaternion.Euler(0, 0, 0));
             newTrigger.tag = "triggers";
             triggers.Add(newTrigger);
@@ -364,8 +378,9 @@ public class Spawner : MonoBehaviour
         {
             //make a trigger up
             spawnPos = currentPos_TriggerUp;
-            spawnPos.x -= roomPosChange.x;
-            spawnPos.y -= roomPosChange.y;
+            //spawnPos.x -= roomPosChange.x;
+            //spawnPos.y -= roomPosChange.y;
+            spawnPos -= roomPosChange;
             GameObject newTriggerUp = Instantiate(TriggerUp, spawnPos, Quaternion.Euler(0, 0, 0));
             newTriggerUp.tag = "triggersUp";
             triggersUp.Add(newTriggerUp);
@@ -401,18 +416,18 @@ public class Spawner : MonoBehaviour
 
     void destroySpawnedObj()
     {
-        //destroy all objects
-        //GameObject.Destroy(rooms[0]);
-        //GameObject.Destroy(furnitureSets[0]);
+        // //destroy all objects
+        // GameObject.Destroy(rooms[0]);
+        // GameObject.Destroy(furnitureSets[0]);
 
-        //rooms.RemoveAt(0);
-        //furnitureSets.RemoveAt(0);
+        // rooms.RemoveAt(0);
+        // furnitureSets.RemoveAt(0);
 
-        //if (stairs.Count > 2)
-        //{
+        // if (stairs.Count > 2)
+        // {
         //    GameObject.Destroy(stairs[0]);
         //    stairs.RemoveAt(0);
-        //}
+        // }
 
         if (generateDown)
         {
