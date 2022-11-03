@@ -54,8 +54,10 @@ public class Initialization : MonoBehaviour
 
     [HideInInspector] public void playEnding()
     {
+
         //code for ending start here
         Debug.Log("Play Ending");
+
     }
 
 
