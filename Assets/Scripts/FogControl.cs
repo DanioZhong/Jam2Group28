@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FogControl : MonoBehaviour
 {
-    private const float FOG_MAX = 10.0f;
+    private const float FOG_MAX = 20.0f;
     private const float FOG_MIN = 5.0f;
 
     private Spawner spawner;
