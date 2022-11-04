@@ -15,7 +15,6 @@ public class RoomSetLogic : MonoBehaviour
     [HideInInspector]
     public void NextRoomCheck(){ // Won't be called due to destroying
         // Look at this!
-        Debug.Log("Generate Room " + currRoom);
         global = GameObject.Find("Global");
         global_init = global.GetComponent<Initialization>();
 
@@ -42,6 +41,8 @@ public class RoomSetLogic : MonoBehaviour
             currRoom = -1;
 
         }
+
+        Debug.Log("Generate Room " + currRoom);
         updateSet(currRoom);
     }
 
@@ -54,6 +55,7 @@ public class RoomSetLogic : MonoBehaviour
             {
                 if (i == room)
                 {
+                    Debug.Log("enable room " + i);
                     transform.GetChild(i).gameObject.SetActive(true);
                 }
                 else

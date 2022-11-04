@@ -37,11 +37,11 @@ public class FogControl : MonoBehaviour
         currPos = mod(player.transform.position.x+ roomWidth/2, roomWidth + stairLength);
         
         if (currPos < roomWidth && isFogOn){
-            Debug.Log("DFog");
+            //Debug.Log("DFog");
             DisableFog();
         }
         if (currPos > roomWidth && !isFogOn){
-            Debug.Log("EFog");
+            //Debug.Log("EFog");
             EnableFog();
         }
     }

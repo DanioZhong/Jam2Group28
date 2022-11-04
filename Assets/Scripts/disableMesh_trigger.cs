@@ -11,7 +11,7 @@ public class disableMesh_trigger : MonoBehaviour
     {
         //hide the obj
         rend = GetComponent<Renderer>();
-       rend.enabled = false;
+      // rend.enabled = false;
     }
 
 }

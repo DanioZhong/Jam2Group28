@@ -262,11 +262,11 @@ public class Spawner : MonoBehaviour
             //spawnPos.x += roomPosChange.x;
             //spawnPos.y += roomPosChange.y;
             spawnPos += roomPosChange;
-            Debug.Log("RoomSpawn");
+            //Debug.Log("RoomSpawn");
             GameObject newRoom = Instantiate(defaultRoom, spawnPos, Quaternion.Euler(0, 90, 0));
             rooms.Add(newRoom);
             currentPos_Room = spawnPos;
-            Debug.Log(currentPos_Room);
+            //Debug.Log(currentPos_Room);
             //make a stair
             spawnPos = currentPos_Stairs;
             //spawnPos.x += roomPosChange.x;
