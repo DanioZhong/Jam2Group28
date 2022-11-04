@@ -2235,6 +2235,36 @@ MonoBehaviour:
     My mom only ever makes those on Christmas. I should go upstairs to see if my
     nose is right. Maybe she\u2019s worried about me. I should double check my room
     before leaving."
+--- !u!114 &5780150513899398573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6689878804016581747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1752573706
+      Data2: 1265658192
+      Data3: 1229343667
+      Data4: 1052480055
+    Path: event:/sfx_scene2_keyExit
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &5770888492008667837
 PrefabInstance:
   m_ObjectHideFlags: 0

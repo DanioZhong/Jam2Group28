@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{85f33d8b-e5eb-4c11-af95-e55ef462643b}">
+		<property name="assetPath">
+			<value>Scene1 Exit.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>47.643401360544217</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ee2c02a5-98e8-4c6c-8c28-df42adeb6eeb}</destination>
+		</relationship>
+	</object>
+</objects>
